@@ -14,9 +14,14 @@
     $z = ["紅茶","綠茶","奶茶","珍珠奶茶","冰淇淋紅茶","梅子綠茶"];
     // var_dump($z);
 
-    echo count($z);
+    // echo count($z);
     //陣列迭代
-    for($i=0;$i<count($z);$i++){
-        echo $z[$i];
+    // for($i=0;$i<count($z);$i++){
+    //     echo $z[$i];
+    //     echo "<br>";
+    // }
+
+    foreach($z as $data){
+        echo $data;
         echo "<br>";
     }
