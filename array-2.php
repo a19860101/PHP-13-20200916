@@ -47,9 +47,10 @@
     $id = 12;
     // ["id"=>12]
     var_dump(compact("id"));
-
+    
+    $name = "test";
 
     $test = extract($users,EXTR_PREFIX_SAME,'t');
-    echo $name;
+    echo $t_name;
     echo $mail;
     echo $birth;
