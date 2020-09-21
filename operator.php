@@ -59,5 +59,17 @@
     var_dump($x || $z); //Or
     echo "<br>";
     var_dump(!$x || $z); //Not
+
+    //字串運算子
+    $name = "John";
+    
+    // echo "HELLO ".$name;
+    // echo "HELLO $name";
+    // echo "HELLO {$name}";
+
+    // echo 'HELLO $name';
+    echo 'HELLO {$name}';
+    
+    
     ?>
     
