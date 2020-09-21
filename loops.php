@@ -28,3 +28,5 @@ do {
     $a++;
 }
 while($a < 10);
+
+//foreach
