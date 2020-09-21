@@ -56,4 +56,14 @@
         default:
             echo "error!!!!!!!!";
     }
+    switch(true){
+        case $x > 0:
+            echo "正數";
+        break;
+        case $x < 0:
+            echo "負數";
+        break;
+        default:
+            echo "error";
+    }
 
