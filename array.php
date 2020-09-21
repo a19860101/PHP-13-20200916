@@ -11,7 +11,7 @@
     $y = array("Apple","Banana","Cat");
     // var_dump($y);
 
-    $z = ["紅茶","綠茶","奶茶","珍珠奶茶","冰淇淋紅茶","梅子綠茶"];
+    $z = ["紅茶","綠茶","奶茶","珍珠奶茶","冰淇淋紅茶","梅子綠茶","拿鐵"];
     // var_dump($z);
 
     // echo count($z);
@@ -21,6 +21,24 @@
     //     echo "<br>";
     // }
 
+   $num = 100;
+
+    echo "<br>";
+    echo count($z);
+    echo "<br>";
+    //排序
+    // sort($z);
+    // rsort($z);
+
+    //is_array()
+    var_dump(is_array($z));
+    var_dump(is_array($num));
+    echo "<br>";
+    //in_array()
+
+    var_dump(in_array("紅茶",$z));
+    var_dump(in_array("拿鐵",$z));
+    echo "<br>";
     foreach($z as $data){
         echo $data;
         echo "<br>";
