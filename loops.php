@@ -12,9 +12,19 @@ for(初始值;條件;迴圈執行完的動作){
 
 */
 echo "<br>";
+echo "<div>while</div>";
 //while
-$x = 0;
+$x = 10;
 while($x<10){
     echo $x;
     $x++;
 }
+echo "<br>";
+echo "<div>do...while</div>";
+//do...while
+$a = 10;
+do {
+    echo $a;
+    $a++;
+}
+while($a < 10);
