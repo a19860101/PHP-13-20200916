@@ -22,7 +22,7 @@
     // }else{
     //     動作C
     // }
-    $x = 0;
+    $x = 10;
     if($x > 0){
         echo "Success 1";
     }
@@ -39,5 +39,21 @@
         echo "負數";
     }else{
         echo "Error!!!!";
+    }
+    echo "<br>";
+    //switch
+
+    switch($x){
+        case 0:
+            echo 0;
+        break;
+        case 1:
+            echo 1;
+        break;
+        case 2:
+            echo 2;
+        break;
+        default:
+            echo "error!!!!!!!!";
     }
 
