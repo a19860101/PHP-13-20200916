@@ -32,3 +32,11 @@
     echo time();
     echo "<br>";
     echo substr(md5(time()),0,10);
+
+    $text = "<h1 class='test'>HELLO 標題</h1>";
+
+    // echo $text;
+    // echo mb_substr($text,0,5,"utf-8");
+    echo "<br>";
+    // echo strip_tags($text);
+    echo mb_substr(strip_tags($text),0,5,'utf-8');
