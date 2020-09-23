@@ -5,12 +5,13 @@
         echo $s;
     }
 
-    function hello($name){
-        echo "HELLO {$name}";
+    function hello($num,$name="Guest"){
+        echo "HELLO {$name} 你是第 {$num} 訪客";
     }
 
-    // hello("John");
-    // hello("Mary");
+    hello(101,"John");
+    hello(102,"Mary");
+    hello(103);
 
     function square($x){
         return $x * $x;
@@ -21,5 +22,7 @@
     // $ans = square(15);
     // echo $ans;
 
-    $ans = test();
-    echo $ans;
+    // $ans = test();
+    // echo $ans;
+
+
