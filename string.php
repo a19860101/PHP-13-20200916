@@ -20,3 +20,15 @@
     echo md5(sha1($pw));
     echo "<br>";
     echo sha1(md5($pw));
+    echo "<br>";
+    
+    echo uniqid();
+    echo "<br>";
+    echo md5(uniqid());
+    echo "<br>";
+    echo substr(md5(uniqid()),0,8);
+    echo "<br>";
+    
+    echo time();
+    echo "<br>";
+    echo substr(md5(time()),0,10);
