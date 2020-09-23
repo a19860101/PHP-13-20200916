@@ -39,6 +39,18 @@
     var_dump(in_array("紅茶",$z));
     var_dump(in_array("拿鐵",$z));
     echo "<br>";
+
+    //陣列->字串
+    $z_str = implode('_',$z);
+    echo $z_str;
+    echo "<br>";
+    
+    //字串->陣列
+    $s = "紅茶_綠茶_奶茶_珍珠奶茶_冰淇淋紅茶_梅子綠茶_拿鐵";
+    $s_array = explode('_',$s);
+    var_dump($s_array);
+    echo "<br>";
+
     foreach($z as $data){
         echo $data;
         echo "<br>";
