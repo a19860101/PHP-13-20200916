@@ -12,5 +12,15 @@
         <input type="text" name="phone">
         <input type="submit" value="送出">
     </form>
+    <form action="response.php" method="get">
+        <input type="text" name="user">
+        <input type="text" name="mail">
+        <input type="text" name="phone">
+        <input type="submit" value="送出">
+    </form>
+    <!-- 
+        表單通常都是使用post方法做傳遞，除了搜尋功能以外。
+        連結只可以使用get方法做傳遞
+     -->
 </body>
 </html>
