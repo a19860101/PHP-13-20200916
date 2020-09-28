@@ -30,17 +30,24 @@
 
     extract($_POST);
     if(empty($name)){
-        echo "姓名不得為空";
+        echo "<div>姓名不得為空</div>";
+    }else{
+        echo "<div>姓名:".trim($name)."</div>";
     }
+
     if(empty($phone)){
-        echo "電話不得為空";
+        echo "<div>電話不得為空</div>";
+    }else{
+        echo "<div>電話:".trim($phone)."</div>";
     }
+    
     if(empty($mail)){
-        echo "Mail不得為空";
+        echo "<div>Mail不得為空</div>";
+    }else{
+        echo "<div>Mail:".trim($mail)."</div>";
+
     }
-    echo "<div>姓名:{$name}</div>";
-    echo "<div>電話:{$phone}</div>";
-    echo "<div>Mail:{$mail}</div>";
+    
     echo "<div>性別:{$gender}</div>";
     echo "<div>學歷:{$edu}</div>";
 
