@@ -23,6 +23,18 @@
                         <label for="">E-mail</label>
                         <input type="text" name="mail" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <label>性別</label>
+                        <label for="male">
+                            <input type="radio" name="gender" id="male" value="男">男
+                        </label>
+                        <label for="female">
+                            <input type="radio" name="gender" id="female" value="女">女
+                        </label>
+                        <label for="unknown">
+                            <input type="radio" name="gender" id="unknown" value="不透漏">不透漏
+                        </label>
+                    </div>
                     <input type="submit" class="btn btn-primary" value="新增">
                 </form>
             </div>
