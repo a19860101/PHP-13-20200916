@@ -60,6 +60,10 @@
                             <label for="premiere" class="form-check-label">影視剪輯</label>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="remark">備註</label>
+                        <textarea name="remark" id="remark" rows="6" class="form-control"></textarea>
+                    </div>
                     <input type="submit" class="btn btn-primary" value="新增">
                 </form>
             </div>
