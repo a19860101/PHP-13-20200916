@@ -3,23 +3,31 @@
     // $phone = $_POST["phone"];
     // $mail = $_POST["mail"];
     // $gender = $_POST["gender"];
-    $edu = $_POST["edu"];
+    // $edu = $_POST["edu"];
+    $skills = $_POST["skills"];
+    var_dump($skills);
+    // 陣列轉字串
+    $skill = implode(',',$skills);
 
 
     // echo "<div>姓名:{$name}</div>";
     // echo "<div>電話:{$phone}</div>";
     // echo "<div>Mail:{$mail}</div>";
     // echo "<div>性別:{$gender}</div>";
-    echo "<div>學歷:{$edu}</div>";
+    // echo "<div>學歷:{$edu}</div>";
+    // echo "<div>專長:{$skill}</div>";
+
     // echo "<div>姓名:{$_POST["name"]}</div>";
     // echo "<div>電話:{$_POST["phone"]}</div>";
     // echo "<div>Mail:{$_POST["mail"]}</div>";
     // echo "<div>性別:{$_POST["gender"]}</div>";
-    echo "<div>學歷:{$_POST["edu"]}</div>";
-
+    // echo "<div>學歷:{$_POST["edu"]}</div>";
+    echo "<div>專長:".implode(",",$_POST["skills"])."</div>";
+    
     extract($_POST);
-    // echo "<div>姓名:{$name}</div>";
-    // echo "<div>電話:{$phone}</div>";
-    // echo "<div>Mail:{$mail}</div>";
-    // echo "<div>性別:{$gender}</div>";
+    echo "<div>姓名:{$name}</div>";
+    echo "<div>電話:{$phone}</div>";
+    echo "<div>Mail:{$mail}</div>";
+    echo "<div>性別:{$gender}</div>";
     echo "<div>學歷:{$edu}</div>";
+    echo "<div>專長:".implode(",",$skills)."</div>";
