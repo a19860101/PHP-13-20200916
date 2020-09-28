@@ -32,7 +32,7 @@
                             <input type="radio" name="gender" id="female" value="女">女
                         </label>
                         <label for="unknown">
-                            <input type="radio" name="gender" id="unknown" value="不透漏">不透漏
+                            <input type="radio" name="gender" id="unknown" value="不透漏" checked>不透漏
                         </label>
                     </div>
                     <div class="form-group">

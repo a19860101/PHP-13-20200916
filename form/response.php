@@ -34,5 +34,10 @@
     echo "<div>Mail:{$mail}</div>";
     echo "<div>性別:{$gender}</div>";
     echo "<div>學歷:{$edu}</div>";
-    echo "<div>專長:".implode(",",$skills)."</div>";
+
+    if(isset($skills)){
+        echo "<div>專長:".implode(",",$skills)."</div>";
+    }
+
+    
     echo "<div>備註:{$remark}</div>";
