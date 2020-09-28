@@ -35,6 +35,16 @@
                             <input type="radio" name="gender" id="unknown" value="不透漏">不透漏
                         </label>
                     </div>
+                    <div class="form-group">
+                        <label for="edu">學歷</label>
+                        <select name="edu" id="edu" class="form-control">
+                            <option value="國小">國小</option>
+                            <option value="國中">國中</option>
+                            <option value="高中職">高中職</option>
+                            <option value="大專院校">大專院校</option>
+                            <option value="研究所以上">研究所以上</option>
+                        </select>
+                    </div>
                     <input type="submit" class="btn btn-primary" value="新增">
                 </form>
             </div>
