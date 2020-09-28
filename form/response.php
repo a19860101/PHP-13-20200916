@@ -29,6 +29,15 @@
     // echo "<div>備註:{$_POST["remark"]}</div>";
 
     extract($_POST);
+    if(empty($name)){
+        echo "姓名不得為空";
+    }
+    if(empty($phone)){
+        echo "電話不得為空";
+    }
+    if(empty($mail)){
+        echo "Mail不得為空";
+    }
     echo "<div>姓名:{$name}</div>";
     echo "<div>電話:{$phone}</div>";
     echo "<div>Mail:{$mail}</div>";
