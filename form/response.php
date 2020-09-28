@@ -29,19 +29,19 @@
     // echo "<div>備註:{$_POST["remark"]}</div>";
 
     extract($_POST);
-    if(empty($name)){
+    if(empty($name) || ctype_space($name)){
         echo "<div>姓名不得為空</div>";
     }else{
         echo "<div>姓名:".trim($name)."</div>";
     }
 
-    if(empty($phone)){
+    if(empty($phone) || ctype_space($phone)){
         echo "<div>電話不得為空</div>";
     }else{
         echo "<div>電話:".trim($phone)."</div>";
     }
     
-    if(empty($mail)){
+    if(empty($mail) || ctype_space($mail)){
         echo "<div>Mail不得為空</div>";
     }else{
         echo "<div>Mail:".trim($mail)."</div>";
