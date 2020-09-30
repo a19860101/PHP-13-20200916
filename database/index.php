@@ -13,18 +13,31 @@
 </head>
 <body>
     <h1>hello title</h1>
+    <table border="1">
+        <tr>
+            <th>#</th>
+            <th>姓名</th>
+            <th>Mail</th>
+            <th>電話</th>
+            <th>性別</th>
+            <th>學歷</th>
+            <th>專長</th>
+            <th>備註</th>
+        </tr>
     <?php
         while($row = mysqli_fetch_assoc($result)){
-            // var_dump($row);
-            echo $row["name"];
-            echo " / ";
-            echo $row["mail"];
-            echo " / ";
-            echo $row["phone"];
-            echo " / ";
-            echo $row["gender"];
-            echo "<br>";
+            echo "<tr>";
+            echo "<td>".$row["id"]."</td>";
+            echo "<td>".$row["name"]."</td>";
+            echo "<td>".$row["mail"]."</td>";
+            echo "<td>".$row["phone"]."</td>";
+            echo "<td>".$row["gender"]."</td>";
+            echo "<td>".$row["edu"]."</td>";
+            echo "<td>".$row["skills"]."</td>";
+            echo "<td>".$row["remark"]."</td>";
+            echo "</tr>";
         }
     ?>
+    </table>
 </body>
 </html>
