@@ -8,3 +8,4 @@
     // $conn = mysqli_connect("localhost","admin","admin","php1320200916");
 
     mysqli_query($conn,"SET NAMES utf8");
+
