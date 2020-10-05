@@ -13,6 +13,7 @@
 </head>
 <body>
     <h1>hello title</h1>
+    <a href="create.php">新增資料</a>
     <table border="1">
         <tr>
             <th>#</th>
