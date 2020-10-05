@@ -26,7 +26,8 @@
         <li>性別：<?php echo $row["gender"]; ?></li>
         <li>學歷：<?php echo $row["edu"]; ?></li>
         <li>專長：<?php echo $row["skills"]; ?></li>
-        <li>備註：<?php echo $row["remark"]; ?></li>
+        <li>備註：<?php echo $row["remark"] === "" ? "無" : $row["remark"]; ?></li>
     </ul>
+    <a href="index.php">回學員列表</a>
 </body>
 </html>
