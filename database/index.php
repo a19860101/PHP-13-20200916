@@ -26,7 +26,13 @@
             <td><?php echo $row["id"]; ?></td>
             <td><?php echo $row["name"]; ?></td>
             <td><?php echo $row["phone"]; ?></td>
-            <td><a href="show.php?id=<?php echo $row["id"]; ?>">檢視</a></td>
+            <td>
+                <a href="show.php?id=<?php echo $row["id"]; ?>">檢視</a>
+                <form action="delete.php" method="post">
+                    <input type="hidden" value="<?php echo $row["id"];?>" name="id">
+                    <input type="submit" value="刪除" onclick="return confirm('確認刪除？')">
+                </form>
+            </td>
         </tr>
     <?php } ?>
     </table>
