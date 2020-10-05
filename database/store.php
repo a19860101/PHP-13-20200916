@@ -35,5 +35,8 @@
             VALUES('$name','$phone','$mail','$gender','$edu','$skills','$remark')";
 
     mysqli_query($conn,$sql);
-    
 
+    header("Refresh:0;url=index.php");
+    echo "<script>alert('資料已新增');</script>";
+
+    // header("Location:index.php");
