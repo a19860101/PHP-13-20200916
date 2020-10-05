@@ -33,23 +33,23 @@
                     <div class="form-group">
                         <label>性別</label>
                         <label for="male">
-                            <input type="radio" name="gender" id="male" value="男">男
+                            <input type="radio" name="gender" id="male" value="男" <?php echo $row["gender"]==="男"?"checked":"";?>>男
                         </label>
                         <label for="female">
-                            <input type="radio" name="gender" id="female" value="女">女
+                            <input type="radio" name="gender" id="female" value="女" <?php echo $row["gender"]==="女"?"checked":"";?>>女
                         </label>
                         <label for="unknown">
-                            <input type="radio" name="gender" id="unknown" value="不透漏" checked>不透漏
+                            <input type="radio" name="gender" id="unknown" value="不透漏"  <?php echo $row["gender"]==="不透漏"?"checked":"";?>>不透漏
                         </label>
                     </div>
                     <div class="form-group">
                         <label for="edu">學歷</label>
                         <select name="edu" id="edu" class="form-control">
-                            <option value="國小">國小</option>
-                            <option value="國中">國中</option>
-                            <option value="高中職">高中職</option>
-                            <option value="大專院校">大專院校</option>
-                            <option value="研究所以上">研究所以上</option>
+                            <option value="國小" <?php echo $row["edu"]==="國小"?"selected":"";?>>國小</option>
+                            <option value="國中" <?php echo $row["edu"]==="國中"?"selected":"";?>>國中</option>
+                            <option value="高中職" <?php echo $row["edu"]==="高中職"?"selected":"";?>>高中職</option>
+                            <option value="大專院校" <?php echo $row["edu"]==="大專院校"?"selected":"";?>>大專院校</option>
+                            <option value="研究所以上" <?php echo $row["edu"]==="研究所以上"?"selected":"";?>>研究所以上</option>
                         </select>
                     </div>
                     <div class="form-group">
