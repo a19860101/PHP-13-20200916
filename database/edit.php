@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-6">
-                <form action="store.php" method="post">
+                <form action="update.php" method="post">
                     <div class="form-group">
                         <label for="">姓名</label>
                         <input type="text" name="name" class="form-control" value="<?php echo $row["name"];?>">
@@ -80,7 +80,8 @@
                         <label for="remark">備註</label>
                         <textarea name="remark" id="remark" rows="6" class="form-control"><?php echo $row["remark"];?></textarea>
                     </div>
-                    <input type="submit" class="btn btn-primary" value="儲存">
+                    <input type="hidden" value="<?php echo $row["id"];?>" name="id">
+                    <input type="submit" class="btn btn-primary" value="更新資料">
                 </form>
             </div>
         </div>
