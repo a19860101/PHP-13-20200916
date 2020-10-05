@@ -56,8 +56,8 @@
                             <label for="web" class="form-check-label">網頁設計</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" name="skills[]" id="premiere" value="影視剪輯" class="form-check-input">
-                            <label for="premiere" class="form-check-label">影視剪輯</label>
+                            <input type="checkbox" name="skills[]" id="premiere" value="影片剪輯" class="form-check-input">
+                            <label for="premiere" class="form-check-label">影片剪輯</label>
                         </div>
                     </div>
                     <div class="form-group">

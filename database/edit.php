@@ -4,6 +4,8 @@
     $sql = "SELECT * FROM students WHERE id=".$id;
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_assoc($result);
+
+    $skills = explode(",",$row["skills"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,19 +54,26 @@
                             <option value="研究所以上" <?php echo $row["edu"]==="研究所以上"?"selected":"";?>>研究所以上</option>
                         </select>
                     </div>
+                    
                     <div class="form-group">
                         <label>專長</label>
                         <div class="form-check">
-                            <input type="checkbox" name="skills[]" id="design" value="平面設計" class="form-check-input">
+                            <input type="checkbox" name="skills[]" id="design" value="平面設計" class="form-check-input"
+                            <?php echo in_array("平面設計",$skills)?"checked":"";?>
+                            >
                             <label for="design" class="form-check-label">平面設計</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" name="skills[]" id="web" value="網頁設計" class="form-check-input">
+                            <input type="checkbox" name="skills[]" id="web" value="網頁設計" class="form-check-input"
+                            <?php echo in_array("網頁設計",$skills)?"checked":"";?>
+                            >
                             <label for="web" class="form-check-label">網頁設計</label>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" name="skills[]" id="premiere" value="影視剪輯" class="form-check-input">
-                            <label for="premiere" class="form-check-label">影視剪輯</label>
+                            <input type="checkbox" name="skills[]" id="premiere" value="影片剪輯" class="form-check-input"
+                            <?php echo in_array("影片剪輯",$skills)?"checked":"";?>
+                            >
+                            <label for="premiere" class="form-check-label">影片剪輯</label>
                         </div>
                     </div>
                     <div class="form-group">
