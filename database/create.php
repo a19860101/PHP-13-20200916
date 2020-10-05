@@ -65,6 +65,8 @@
                         <textarea name="remark" id="remark" rows="6" class="form-control"></textarea>
                     </div>
                     <input type="submit" class="btn btn-primary" value="新增">
+                    <input type="button" class="btn btn-danger" value="取消" onclick="history.back()">
+
                 </form>
             </div>
         </div>
