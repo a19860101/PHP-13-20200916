@@ -36,22 +36,17 @@
                         <th>#</th>
                         <th>姓名</th>
                         <th>電話</th>
-                        <th>Mail</th>
-                        <th>性別</th>
-                        <th>教育程度</th>
-                        <th>專長</th>
-                        <th>備註</th>
+                        <th>
+                        </th>
                     </tr>
                 <?php foreach($rows as $row){?>
                     <tr>
                         <td><?php echo $row["id"];?></td>
                         <td><?php echo $row["name"];?></td>
                         <td><?php echo $row["phone"];?></td>
-                        <td><?php echo $row["mail"];?></td>
-                        <td><?php echo $row["gender"];?></td>
-                        <td><?php echo $row["edu"];?></td>
-                        <td><?php echo $row["skills"];?></td>
-                        <td><?php echo $row["remark"];?></td>
+                        <td>
+                            <a href="show.php?id=<?php echo $row["id"];?>" class="btn btn-primary">檢視</a>
+                        </td>
                     </tr>
                 <?php }?>
                 </table>
