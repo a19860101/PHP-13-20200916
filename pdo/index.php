@@ -5,7 +5,10 @@
         //預備陳述式
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
-        
+        $rows = array();
+        while($data = $stmt->fetch()){
+            $rows[] = $data;
+        }
     }
     catch(PDOException $e){
         echo $e->getMessage();
@@ -19,7 +22,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php while($row = $stmt->fetch()){?>
+    <?php foreach($rows as $row){?>
         <div><?php echo $row["name"];?></div>
     <?php }?>
 </body>
