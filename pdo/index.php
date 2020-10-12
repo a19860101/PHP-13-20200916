@@ -46,6 +46,8 @@
                         <td><?php echo $row["phone"];?></td>
                         <td>
                             <a href="show.php?id=<?php echo $row["id"];?>" class="btn btn-primary">檢視</a>
+                            <a href="edit.php?id=<?php echo $row["id"];?>" class="btn btn-success">編輯</a>
+                        
                         </td>
                     </tr>
                 <?php }?>
