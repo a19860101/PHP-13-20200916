@@ -1,3 +1,17 @@
+<?php
+    try {
+        require_once("pdo.php");
+        $sql = "SELECT * FROM gallery";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $rows = array();
+        while($data = $stmt->fetch()){
+            $rows[] = $data;
+        }
+    }catch(PDOException $e){
+        echo $e->getMessage();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +25,8 @@
         <input type="file" name="img">
         <input type="submit" value="上傳檔案">
     </form>
-
+    <?php foreach($rows as $row){ ?>
+        <img src="images/<?php echo $row["path"]; ?>" width="200">
+    <?php } ?>
 </body>
 </html>
