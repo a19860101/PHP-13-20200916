@@ -19,6 +19,10 @@
     ?>
 
     <img src="<?php echo $img;?>" width="150">
+    <form action="delete.php" method="post">
+        <input type="hidden" name="img" value="<?php echo $img; ?>">
+        <input type="submit" value="刪除" onclick="return confirm('確認刪除？')">
+    </form>
     <?php } ?>
 </body>
 </html>
