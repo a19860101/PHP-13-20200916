@@ -27,11 +27,15 @@
         case "image/gif":
             $path = md5(time()).".gif";
         break;
+        default: 
+            echo "請上傳正確的圖片";
+            return;
     }
     $target = "images/".$path;
     if($error === 0){
         if(move_uploaded_file($tmp_name,$target)){
             echo "上傳成功";
+            header("refresh: 1;url=index.php");
         }else{
             echo "上傳失敗";
         }
