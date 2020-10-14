@@ -17,7 +17,18 @@
     // echo $tmp_name;
     // echo $error;
     // echo $size;
-    $target = "images/".$name;
+    switch($type){
+        case "image/jpeg":
+            $path = md5(time()).".jpg";
+        break;
+        case "image/png":
+            $path = md5(time()).".png";
+        break;
+        case "image/gif":
+            $path = md5(time()).".gif";
+        break;
+    }
+    $target = "images/".$path;
     if($error === 0){
         if(move_uploaded_file($tmp_name,$target)){
             echo "上傳成功";
