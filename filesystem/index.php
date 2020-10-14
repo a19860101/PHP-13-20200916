@@ -13,7 +13,12 @@
     </form>
     <?php
         $imgs = glob("images/*");
-        var_dump($imgs);
+        $img_num = count($imgs);
+        echo "<div>目前共有{$img_num}張圖片</div>";
+        foreach($imgs as $img){
     ?>
+
+    <img src="<?php echo $img;?>" width="150">
+    <?php } ?>
 </body>
 </html>
