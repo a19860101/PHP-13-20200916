@@ -1,4 +1,5 @@
 <?php
+    include("function.php");
     extract($_POST);
 
     if(isset($skills)){
@@ -7,15 +8,7 @@
         $skills = "";
     }
 
-    try {
-        require_once("pdo.php");
-        $sql = "INSERT INTO students(name, phone, mail, gender, edu, skills, remark)
-                VALUES(?,?,?,?,?,?,?)";
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute([$name, $phone, $mail, $gender, $edu, $skills, $remark]);
-    }catch(PDOException $e){
-        echo $e->getMessage();
-    }
+    store($name, $phone, $mail, $gender, $edu, $skills, $remark);
 
     header("Refresh:0;url=index.php");
     echo "<script>alert('資料已新增');</script>";
