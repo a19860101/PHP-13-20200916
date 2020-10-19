@@ -14,7 +14,7 @@
             return $e->getMessage();
         }
     }
-    function store(){
+    function store($name,$path){
         try {
             require_once("pdo.php");
             $sql = "INSERT INTO gallery(name,path)VALUES(?,?)";
@@ -44,9 +44,8 @@
         if($error === 0){
             if(move_uploaded_file($tmp_name,$target)){
                 echo "上傳成功";
-               
-                header("refresh: 1;url=index.php");
-    
+                imgResize($type,$target,$path);
+                return $path;
             }else{
                 echo "上傳失敗";
             }
