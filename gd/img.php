@@ -5,8 +5,8 @@
     $canvas_h = imagesy($canvas);
     // echo $canvas_w,$canvas_h;
 
-    $new_w = 300;
-    $new_h = 400;
+    $new_w = 358;
+    $new_h = $canvas_h / $canvas_w * $new_w;
 
     $new_canvas = imagecreatetruecolor($new_w,$new_h);
 
