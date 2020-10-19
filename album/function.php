@@ -64,16 +64,17 @@
             case "image/gif":
                 $canvas = imagecreatefromgif($target);
             break;
-            $canvas_w = imagesx($canvas);
-            $canvas_h = imagesy($canvas);
-
-            $new_w = 600;
-            $new_h = $canvas_h / $canvas_w * $new_w;
-
-            $new_canvas = imagecreatetruecolor($new_w,$new_h);
-            imagecopyresampled($new_canvas,$canvas,0,0,0,0,$new_w,$new_h,$canvas_w,$canvas_h);
-            imagejpeg($new_canvas,"thumbs/".$path);
-            imagepng($new_canvas,"thumbs/".$path);
-            imagegif($new_canvas,"thumbs/".$path);
         }
+        $canvas_w = imagesx($canvas);
+        $canvas_h = imagesy($canvas);
+
+        $new_w = 600;
+        $new_h = $canvas_h / $canvas_w * $new_w;
+
+        $new_canvas = imagecreatetruecolor($new_w,$new_h);
+        imagecopyresampled($new_canvas,$canvas,0,0,0,0,$new_w,$new_h,$canvas_w,$canvas_h);
+        imagejpeg($new_canvas,"thumbs/".$path);
+        imagepng($new_canvas,"thumbs/".$path);
+        imagegif($new_canvas,"thumbs/".$path);
+        
     }
