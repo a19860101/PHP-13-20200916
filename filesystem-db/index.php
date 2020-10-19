@@ -33,8 +33,7 @@
         <label for="<?php echo $row["path"]; ?>">
             <img src="images/<?php echo $row["path"]; ?>" width="200">
         </label>
-        <input type="hidden" name="path[]" value="<?php echo $row["path"]; ?>">
-        <input type="checkbox" name="del[]" id="<?php echo $row["path"]; ?>" value="<?php echo $row["id"]; ?>">
+        <input type="checkbox" name="del[]" id="<?php echo $row["path"]; ?>" value="<?php echo $row["path"]; ?>">
     <?php } ?>
    
     </form>
