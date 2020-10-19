@@ -27,7 +27,7 @@
     </form>
 
     <form action="delete.php" method="post">
-    <div><input type="submit" value="刪除"></div>
+    <div><input type="submit" value="刪除" onclick="return confirm('確認刪除？')"></div>
     
     <?php foreach($rows as $row){ ?>
         <label for="<?php echo $row["path"]; ?>">
