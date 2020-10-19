@@ -54,7 +54,7 @@
             echo "上傳錯誤";
         }
     }
-    function imgResize($type,$target){
+    function imgResize($type,$target,$path){
         switch($type){
             case "image/jpeg":
                 $canvas = imagecreatefromjpeg($target);
@@ -73,8 +73,8 @@
 
             $new_canvas = imagecreatetruecolor($new_w,$new_h);
             imagecopyresampled($new_canvas,$canvas,0,0,0,0,$new_w,$new_h,$canvas_w,$canvas_h);
-            imagejpeg($new_canvas,"thumbs/".$name);
-            imagepng($new_canvas,"thumbs/".$name);
-            imagegif($new_canvas,"thumbs/".$name);
+            imagejpeg($new_canvas,"thumbs/".$path);
+            imagepng($new_canvas,"thumbs/".$path);
+            imagegif($new_canvas,"thumbs/".$path);
         }
     }
