@@ -25,8 +25,17 @@
         <input type="file" name="img">
         <input type="submit" value="上傳檔案">
     </form>
+
+    <form action="delete.php" method="post">
+    <div><input type="submit" value="刪除"></div>
+    
     <?php foreach($rows as $row){ ?>
-        <img src="images/<?php echo $row["path"]; ?>" width="200">
+        <label for="<?php echo $row["path"]; ?>">
+            <img src="images/<?php echo $row["path"]; ?>" width="200">
+        </label>
+        <input type="checkbox" name="del[]" id="<?php echo $row["path"]; ?>" value="<?php echo $row["id"]; ?>">
     <?php } ?>
+   
+    </form>
 </body>
 </html>
