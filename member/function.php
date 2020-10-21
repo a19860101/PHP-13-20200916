@@ -12,8 +12,8 @@
             $stmt->execute([$user]);
             $row = $stmt -> fetch(PDO::FETCH_ASSOC);
             if($row && $row["pw"] == $pw){
-               $_SESSION["AUTH"] = $row;
-               return 0;
+                $_SESSION["AUTH"] = $row;
+                return 0;
             }else{
                 return 1 ;
                 //帳號或密碼錯誤
@@ -22,4 +22,8 @@
             return $e->getMessage();
         }
     }
-    // mysqli_fetch_assoc(),mysqli_fetch_row(),mysqli_fetch_array()
+
+    function logout(){
+        session_start();
+        unset($_SESSION["AUTH"]);
+    }
