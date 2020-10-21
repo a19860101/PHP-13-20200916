@@ -12,5 +12,20 @@
         
         <a href="#">登出</a>
     </nav>
+    <?php
+        if(isset($_GET["error"])){
+            switch($_GET["error"]){
+                case 1:
+                    echo "帳號或密碼錯誤!!";
+                break;
+                case 2:
+                    echo "請輸入帳號或密碼!!";
+                break;
+                case 3:
+                    echo "發生錯誤，請稍後再試!!";
+                break;
+            }
+        }
+    ?>
 </body>
 </html>

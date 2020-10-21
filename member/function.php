@@ -11,7 +11,7 @@
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$user]);
             $row = $stmt -> fetch(PDO::FETCH_ASSOC);
-            if($row["pw"] == $pw){
+            if($row && $row["pw"] == $pw){
                $_SESSION["AUTH"] = $row;
                return 0;
             }else{
