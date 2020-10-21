@@ -28,8 +28,8 @@
     
     <div>
     <?php
-        if($_SESSION){
-            echo $_SESSION["USER"]."你好!您的密碼是:".$_SESSION["PW"];
+        if(isset($_SESSION["AUTH"])){
+            echo $_SESSION["AUTH"]["user"]."你好!您的密碼是:".$_SESSION["AUTH"]["pw"];
         }
     ?>
     </div>
