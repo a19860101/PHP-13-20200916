@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
 <body>
+    <?php if(!$_SESSION){ ?>
     <form action="auth.php" method="post">
         <div>
             帳號
@@ -20,8 +21,17 @@
         </div>
         <input type="submit" value="登入">
     </form>
+    <?php }else{ ?>
+    <a href="logout.php">登出</a>
+    <?php } ?>
+    
+    
+    <div>
     <?php
-        echo $_SESSION["USER"]."你好!您的密碼是:".$_SESSION["PW"];
+        if($_SESSION){
+            echo $_SESSION["USER"]."你好!您的密碼是:".$_SESSION["PW"];
+        }
     ?>
+    </div>
 </body>
 </html>
