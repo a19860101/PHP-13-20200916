@@ -1,4 +1,7 @@
 <?php
     include("function.php");
     extract($_POST);
-    auth($user,$pw);
+    $auth = auth($user,$pw);
+
+    // header("location:index.php");
+    echo $auth;
