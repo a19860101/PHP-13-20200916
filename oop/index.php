@@ -9,7 +9,7 @@
         public $type;
         #方法
         function woof(){
-            echo "叫";
+            return "叫";
         }
         function watchDoor(){
             echo "看門";
@@ -27,7 +27,8 @@
     echo "<br>";
     echo $lucky->type = "及哇哇";
     echo "<br>";
-    
+    echo $lucky->woof();
+    echo "<br>";
     
     $qq = new Dog;
     
@@ -36,3 +37,15 @@
     echo $qq->size = "Medium";
     echo "<br>";
     echo $qq->type = "秋田";
+    echo "<br>";
+    echo $qq->woof();
+    echo "<br>";
+
+    class Cat extends Dog{
+
+    }
+
+    $bb = new Cat;
+
+    // echo $bb->color;
+    echo $bb->woof();
