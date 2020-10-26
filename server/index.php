@@ -6,7 +6,7 @@
     echo "<br>";
     echo $_SERVER["QUERY_STRING"];
     echo "<br>";
-    echo $_SERVER["REQUEST_URI"];
+    echo $_SERVER["REQUEST_URI"]; 
     echo "<br>";
     $domain = $_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];
     echo $domain;
