@@ -39,7 +39,7 @@
             }
             $sql = "INSERT INTO users(user,pw,create_at)VALUES(?,?,?)";
             $stmt = $pdo->prepare($sql);
-            $now = date("Y-m-d H:i:s");
+            
             $stmt->execute([$user,$pw,$now]);
             return 0;
         }catch(PDOException $e){
