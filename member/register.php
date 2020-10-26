@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="store.php" method="post">
         <div>
             帳號
             <input type="text" name="user">
