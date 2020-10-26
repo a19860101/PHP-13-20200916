@@ -7,6 +7,10 @@
 
     #建立類別
     class Dog {
+        #建構子
+        function __construct(){
+            echo "hello";
+        }
         #屬性
         public $color="Black";
         public $size="Small";
@@ -22,11 +26,16 @@
         function run(){
             echo $this->gender; 
         }
+        #靜態方法 不能使用$this
+        static function sleep(){
+            echo "ZZZZZ...";
+        }
     }
 
     #建立實例(實體)
 
     $lucky = new Dog;
+    Dog::sleep();
     // var_dump($lucky);
 
     // echo $lucky->color;
@@ -52,7 +61,7 @@
 
     class Cat extends Dog{
         function catchMouse(){
-            echo  $this->gender;
+            echo  $this->type;
         }
     }
 
@@ -63,3 +72,6 @@
     // echo $bb->gender;
     // $bb->run();
     $bb->catchMouse();
+
+    $cc = new Cat;
+    Cat::sleep();
