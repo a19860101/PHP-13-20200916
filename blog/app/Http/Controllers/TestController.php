@@ -8,9 +8,10 @@ class TestController extends Controller
 {
     //
     function show(){
-        return 'Hello Test Show!!!!';
+        return view('test');
     }
     function wow(){
-        return 'WOW!!!';
+        // return 'WOW!!!';
+        return view('wow');
     }
 }
