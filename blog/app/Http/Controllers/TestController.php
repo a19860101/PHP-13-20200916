@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 class TestController extends Controller
 {
     //
-    function show(){
-        return view('test');
+    function show($id){
+        return view('test',['id'=>$id]);
     }
-    function wow(){
+    function wow($id){
         // return 'WOW!!!';
-        return view('wow');
+        return view('wow',['id'=>$id]);
     }
 }

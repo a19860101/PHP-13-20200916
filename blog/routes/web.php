@@ -17,5 +17,5 @@ Route::get('/', function () {
 // Route::get('/test', function(){
 //     return view('test');
 // });
-Route::get('/test','TestController@show');
-Route::get('/test/wow','TestController@wow');
+Route::get('/test/{id}','TestController@show');
+Route::get('/wow/{id}','TestController@wow');

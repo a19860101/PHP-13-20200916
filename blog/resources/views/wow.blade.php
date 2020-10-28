@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>WOW</h1>
+    <h1>WOW {{$id}}</h1>
 </body>
 </html>
