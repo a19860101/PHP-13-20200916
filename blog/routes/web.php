@@ -14,8 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
-// Route::get('/test', function(){
-//     return view('test');
-// });
-Route::get('/test/{id}','TestController@show');
-Route::get('/wow/{id}','TestController@wow');
+Route::get('post/create','PostController@create');
