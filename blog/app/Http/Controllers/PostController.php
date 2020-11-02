@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\DB;
 class PostController extends Controller
 {
     //
+    function index(){
+        return view('post.index');
+    }
     function create(){
         return view('post.create');
     }
@@ -19,6 +22,6 @@ class PostController extends Controller
             now()
         ]);
 
-        return '文章已建立';
+        return redirect()->route('post.index');
     }
 }
