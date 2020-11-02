@@ -10,7 +10,8 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-                <form action="">
+                <form action="{{route('post.store')}}" method="post">
+                @csrf
                     <div class="form-group">
                         <label for="title">文章標題</label>
                         <input type="text" class="form-control" id="title" name="title">
