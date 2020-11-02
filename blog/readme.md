@@ -8,3 +8,23 @@ php artsian serve
 ```bash
 php artisan make:controller TestController
 ```
+
+Migrate
+```bash
+# 執行Migrate
+php artisan migrate
+
+## 回復Migrate
+php artisan migrate:rollback
+
+## 重置Migrate
+php artisan migrate:reset
+
+## 查看Migrate狀態
+php artisan migrate:status
+```
+
+建立Migration
+```bash
+php artisan make:migration create_posts_table
+```
