@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     //
     function index(){
-        $posts = DB::select('SELECT * FROM posts');
+        $posts = DB::select('SELECT * FROM posts ORDER BY id DESC');
         return view('post.index',compact('posts'));
         // return $posts;
         // dd($posts);

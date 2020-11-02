@@ -9,11 +9,20 @@
 </head>
 <body>
     <h1>INDEX</h1>
-    @foreach($posts as $post)
-    <h2>{{$post->title}}</h2>
-    <div>
-        {{$post->content}}
+    <div class="container">
+        <div class="row justify-content-center">
+            @foreach($posts as $post)
+            <div class="col-8 border mb-5 p-4">
+                <h2>{{$post->title}}</h2>
+                <div>
+                    {{$post->content}}
+                </div>
+                <div>
+                {{$post->created_at}}
+                </div>
+            </div>
+            @endforeach       
+        </div>
     </div>
-    @endforeach
 </body>
 </html>
