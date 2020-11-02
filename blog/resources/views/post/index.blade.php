@@ -9,5 +9,11 @@
 </head>
 <body>
     <h1>INDEX</h1>
+    @foreach($posts as $post)
+    <h2>{{$post->title}}</h2>
+    <div>
+        {{$post->content}}
+    </div>
+    @endforeach
 </body>
 </html>
