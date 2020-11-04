@@ -33,6 +33,7 @@ class PostController extends Controller
         return view('post.show',compact('posts'));
     }
     function destroy(Request $request){
-        return $request->id;
+        DB::delete('DELETE FROM posts WHERE id = ?',[$request->id]);
+        return redirect()->route('post.index');
     }
 }
