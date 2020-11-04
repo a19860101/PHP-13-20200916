@@ -32,4 +32,7 @@ class PostController extends Controller
         // return $posts;
         return view('post.show',compact('posts'));
     }
+    function destroy(Request $request){
+        return $request->id;
+    }
 }

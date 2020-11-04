@@ -20,6 +20,13 @@
                 <div>
                 {{$post->created_at}}
                 </div>
+                <div>
+                    <form action="{{route('post.destroy',['id'=>$post->id])}}" method="post">
+                        @csrf
+                        @method('delete')
+                        <input type="submit" value="刪除" class="btn btn-danger">
+                    </form>
+                </div>
             </div>
             @endforeach       
         </div>
