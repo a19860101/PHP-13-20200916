@@ -3,7 +3,7 @@
     <h1>Show</h1>
     <div class="container">
         <div class="row justify-content-center">
-            @foreach($posts as $post)
+            {{--@foreach($posts as $post)--}}
             <div class="col-8 border mb-5 p-4">
                 <h2>{{$post->title}}</h2>
                 <div>
@@ -22,7 +22,7 @@
                     <a href="{{route('post.index')}}" class="btn btn-info">文章列表</a>
                 </div>
             </div>
-            @endforeach       
+            {{--@endforeach       --}}
         </div>
     </div>
 @endsection
