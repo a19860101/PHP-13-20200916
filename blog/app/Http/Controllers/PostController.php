@@ -32,20 +32,20 @@ class PostController extends Controller
         // return $posts;
         return view('post.show',compact('posts'));
     }
-    function destroy(Request $request){
-        DB::delete('DELETE FROM posts WHERE id = ?',[$request->id]);
+    function destroy(Request $request,$id){
+        DB::delete('DELETE FROM posts WHERE id = ?',[$id]);
         return redirect()->route('post.index');
     }
     function edit($id){
         $posts = DB::select('SELECT * FROM posts WHERE id = ?',[$id]);
         return view('post.edit',compact('posts'));
     }
-    function update(Request $request){
+    function update(Request $request,$id){
         DB::update('UPDATE posts SET title=?,content=?,updated_at=? WHERE id = ?',[
             $request->title,
             $request->content,
             now(),
-            $request->id
+            $id
         ]);
         return redirect()->route('post.index');
     }
