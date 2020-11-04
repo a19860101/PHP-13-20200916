@@ -16,6 +16,8 @@
                             <textarea name="content" id="content" cols="30" rows="10" class="form-control">{{$post->content}}</textarea>
                         </div>
                         <input type="submit" value="更新文章" class="btn btn-primary">
+                        <input type="button" value="取消" class="btn btn-danger" onclick="history.back()">
+
                     </form>
                 </div>
             </div>

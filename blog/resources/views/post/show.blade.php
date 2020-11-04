@@ -19,6 +19,7 @@
                         <input type="submit" value="刪除" class="btn btn-danger" onclick="return confirm('確認刪除？')">
                     </form>
                     <a href="{{route('post.edit',['id'=>$post->id])}}" class="btn btn-success">編輯內容</a>
+                    <a href="{{route('post.index')}}" class="btn btn-info">文章列表</a>
                 </div>
             </div>
             @endforeach       

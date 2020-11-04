@@ -1,4 +1,4 @@
-@extends('tempalte.master')
+@extends('template.master')
 
 @section('main')
 <div class="container">
@@ -15,6 +15,7 @@
                         <textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
                     </div>
                     <input type="submit" value="建立文章" class="btn btn-primary">
+                    <input type="button" value="取消" class="btn btn-danger" onclick="history.back()">
                 </form>
             </div>
         </div>
