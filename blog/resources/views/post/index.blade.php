@@ -17,6 +17,7 @@
                 <div>
                     {{$post->content}}
                 </div>
+                <a href="{{route('post.show',['id'=>$post->id])}}" class="btn btn-primary">繼續閱讀</a>
                 <div>
                 {{$post->created_at}}
                 </div>

@@ -27,4 +27,7 @@ class PostController extends Controller
 
         return redirect()->route('post.index');
     }
+    function show($id){
+        return 'Post #'.$id;
+    }
 }
