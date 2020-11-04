@@ -7,46 +7,81 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
-    //
-    function index(){
-        $posts = DB::select('SELECT * FROM posts ORDER BY id DESC');
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //CRUD Create Read Update Delete
+        $posts = DB::table('posts')->orderBy('id','DESC')->get();
         return view('post.index',compact('posts'));
-        // return $posts;
-        // dd($posts);
     }
-    function create(){
-        return view('post.create');
-    }
-    function store(Request $request){
-        DB::insert('INSERT INTO posts(title,content,created_at,updated_at)VALUES(?,?,?,?)',[
-            $request->title,
-            $request->content,
-            now(),
-            now()
-        ]);
 
-        return redirect()->route('post.index');
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
-    function show($id){
-        $posts = DB::select('SELECT * FROM posts WHERE id = ?',[$id]);
-        // return $posts;
-        return view('post.show',compact('posts'));
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
     }
-    function destroy(Request $request,$id){
-        DB::delete('DELETE FROM posts WHERE id = ?',[$id]);
-        return redirect()->route('post.index');
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
     }
-    function edit($id){
-        $posts = DB::select('SELECT * FROM posts WHERE id = ?',[$id]);
-        return view('post.edit',compact('posts'));
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
     }
-    function update(Request $request,$id){
-        DB::update('UPDATE posts SET title=?,content=?,updated_at=? WHERE id = ?',[
-            $request->title,
-            $request->content,
-            now(),
-            $id
-        ]);
-        return redirect()->route('post.index');
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }

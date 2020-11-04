@@ -7,6 +7,8 @@ php artsian serve
 建立Controller
 ```bash
 php artisan make:controller TestController
+
+php artisan make:controller TestController --resource
 ```
 
 Migrate
