@@ -28,6 +28,8 @@ class PostController extends Controller
         return redirect()->route('post.index');
     }
     function show($id){
-        return 'Post #'.$id;
+        $posts = DB::select('SELECT * FROM posts WHERE id = ?',[$id]);
+        // return $posts;
+        return view('post.show',compact('posts'));
     }
 }
