@@ -36,4 +36,11 @@ class PostController extends Controller
         DB::delete('DELETE FROM posts WHERE id = ?',[$request->id]);
         return redirect()->route('post.index');
     }
+    function edit($id){
+        $posts = DB::select('SELECT * FROM posts WHERE id = ?',[$id]);
+        return view('post.edit',compact('posts'));
+    }
+    function update(Request $request){
+        return $request;
+    }
 }
