@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/','PostController@index')->name('post.index');
-Route::get('post/create','PostController@create')->name('post.create');
-Route::post('post/','PostController@store')->name('post.store');
-Route::get('post/{id}','PostController@show')->name('post.show');
-Route::delete('post/{id}','PostController@destroy')->name('post.destroy');
-Route::get('post/{id}/edit','PostController@edit')->name('post.edit');
-Route::put('post/{id}','PostController@update')->name('post.update');
+// Route::get('/','PostController@index')->name('post.index');
+// Route::get('post/create','PostController@create')->name('post.create');
+// Route::post('post/','PostController@store')->name('post.store');
+// Route::get('post/{id}','PostController@show')->name('post.show');
+// Route::delete('post/{id}','PostController@destroy')->name('post.destroy');
+// Route::get('post/{id}/edit','PostController@edit')->name('post.edit');
+// Route::put('post/{id}','PostController@update')->name('post.update');
+
+Route::resource('/post','PostController');
