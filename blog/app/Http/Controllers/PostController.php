@@ -47,12 +47,15 @@ class PostController extends Controller
         // $post->content  =   $request->content;
         // $post->save();
 
-        $post->fill([
-            'title'     => $request->title,
-            'content'   => $request->content
-        ]);
-        $post->save();
+        // $post->fill([
+        //     'title'     => $request->title,
+        //     'content'   => $request->content
+        // ]);
+        // $post->save();
 
+        $post->fill($request->all());
+        $post->save();
+        
         return redirect()->route('post.index');
     }
 
