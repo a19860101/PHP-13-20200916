@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -14,9 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //CRUD Create Read Update Delete
-        $posts = DB::table('posts')->orderBy('id','DESC')->get();
-        return view('post.index',compact('posts'));
+        //
     }
 
     /**
@@ -27,7 +25,6 @@ class PostController extends Controller
     public function create()
     {
         //
-        return view('post.create');
     }
 
     /**
@@ -39,75 +36,50 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
-        DB::table('posts')->insert([
-            'title'         =>  $request->title,
-            'content'       =>  $request->content,
-            'created_at'    =>  now(),
-            'updated_at'    =>  now()
-        ]);
-        return redirect()->route('post.index');
-
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
         //
-        // $posts = DB::table('posts')->where('id',$id)->get();
-        // return view('post.show',compact('posts'));
-
-        // $post = DB::table('posts')->where('id',$id)->first();
-        $post = DB::table('posts')->find($id);
-        return view('post.show',compact('post'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
         //
-        $post = DB::table('posts')->find($id);
-        return view('post.edit',compact('post'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
         //
-        DB::table('posts')->where('id',$id)->update([
-            'title'     => $request->title,
-            'content'   => $request->content,
-            'updated_at'=> now()
-        ]);
-
-        return redirect()->route('post.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
         //
-        DB::table('posts')->where('id',$id)->delete();
-        return redirect()->route('post.index');
     }
 }

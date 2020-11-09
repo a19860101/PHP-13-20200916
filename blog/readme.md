@@ -30,3 +30,14 @@ php artisan migrate:status
 ```bash
 php artisan make:migration create_posts_table
 ```
+
+建立Model
+```bash
+php artisan make:model Post
+
+php artisan make:model Post -c
+
+php artisan make:model Post -cr
+
+php artisan make:model Post -crm
+```
