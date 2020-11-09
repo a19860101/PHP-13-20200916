@@ -99,7 +99,7 @@ class PostController extends Controller
     {
         //
         // $post = Post::findOrFail($post->id);
-        
+
         // $post->fill([
         //     'title'     =>  $request->title,
         //     'content'   =>  $request->content
@@ -120,5 +120,12 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         //
+        // $post = Post::findOrFail($post->id);
+        // $post->delete();
+
+        // $post->delete();
+
+        Post::destroy($post->id);
+        return redirect()->route('post.index');
     }
 }
