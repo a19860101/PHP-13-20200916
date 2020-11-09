@@ -69,7 +69,7 @@ class PostController extends Controller
     {
         //
         // $post = Post::find($post->id);
-        $post = Post::findOrFail($post->id);
+        // $post = Post::findOrFail($post->id);
         // $post = Post::where('id',$post->id)->first();
 
         return view('post.show',compact('post'));
@@ -84,6 +84,8 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         //
+        // $post = Post::findOrFail($post->id);
+        return view('post.edit',compact('post'));
     }
 
     /**
@@ -96,6 +98,17 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         //
+        // $post = Post::findOrFail($post->id);
+        
+        // $post->fill([
+        //     'title'     =>  $request->title,
+        //     'content'   =>  $request->content
+        // ]);
+
+        $post->fill($request->all());
+        $post->save();
+
+        return redirect()->route('post.index');
     }
 
     /**
