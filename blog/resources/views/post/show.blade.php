@@ -7,7 +7,7 @@
             <div class="col-8 border mb-5 p-4">
                 <h2>{{$post->title}}</h2>
                 <div>
-                    {{$post->content}}
+                    {!! $post->content !!}
                 </div>
                 <div>
                 {{$post->created_at}}
