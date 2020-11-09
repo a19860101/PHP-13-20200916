@@ -8,7 +8,7 @@
             <div class="col-8 border mb-5 p-4">
                 <h2>{{$post->title}}</h2>
                 <div>
-                    {{$post->content}}
+                    {{Str::limit($post->content,200)}}
                 </div>
                 <a href="{{route('post.show',['id'=>$post->id])}}" class="btn btn-primary">繼續閱讀</a>
                 <div>
