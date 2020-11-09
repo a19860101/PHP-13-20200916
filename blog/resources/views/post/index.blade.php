@@ -18,7 +18,7 @@
                 </div>
                 <div>
                     
-                    @php Carbon\Carbon::setLocale('zh_TW'); @endphp
+                    @php Carbon\Carbon::setLocale('zh_TW');  @endphp
                     建立時間 {{ Carbon\Carbon::parse($post->created_at)->diffForHumans() }}
                     <br>
                     更新時間 {{ Carbon\Carbon::parse($post->updated_at)->diffForHumans() }}
