@@ -20,3 +20,6 @@ Route::get('/','PostController@index')->name('post.index');
 // Route::put('post/{id}','PostController@update')->name('post.update');
 
 Route::resource('/post','PostController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
