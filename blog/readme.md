@@ -29,6 +29,8 @@ php artisan migrate:status
 建立Migration
 ```bash
 php artisan make:migration create_posts_table
+
+php artisan make:migration add_user_id_to_posts_table --table=posts
 ```
 
 建立Model
