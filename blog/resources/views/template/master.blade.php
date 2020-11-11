@@ -16,9 +16,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('post.create')}}">新增文章</a>
-            </li>   
+            @auth
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{route('post.create')}}">新增文章</a>
+                </li>
+            @endauth   
         </ul>
         <ul class="navbar-nav ml-auto">
             <!-- Authentication Links -->
