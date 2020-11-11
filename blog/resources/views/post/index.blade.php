@@ -27,7 +27,10 @@
                     更新時間 {{ Carbon\Carbon::parse($post->updated_at)->diffForHumans() }}
                 </div>
             </div>
-            @endforeach       
+            @endforeach  
+            <div class="col-8">
+                {{$posts->links()}}
+            </div>     
         </div>
     </div>
 @endsection

@@ -25,7 +25,7 @@ Route::get('/','PostController@index')->name('post.index');
 Route::group(['middleware' => 'auth'],function(){
     Route::resource('/post','PostController')->except('index','show');
 });
-
+// Route::resource('/post','PostController')->middleware('auth');
 Route::resource('/post','PostController')->only('index','show');
 
 Auth::routes();
