@@ -7,6 +7,7 @@
             @foreach($posts as $post)
             <div class="col-8 border mb-5 p-4">
                 <h2>{{$post->title}}</h2> 
+                <div>分類: {{$post->category_id}}</div>
                 <div>
                     作者: {{$post->user->name}}
                 </div>

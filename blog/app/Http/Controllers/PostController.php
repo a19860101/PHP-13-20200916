@@ -60,7 +60,7 @@ class PostController extends Controller
 
         $post->fill($request->all());
         $post->user_id = Auth::id();
-
+        $post->category_id = $request->category_id;
         $post->save();
 
         return redirect()->route('post.index');
