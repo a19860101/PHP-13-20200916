@@ -22,7 +22,7 @@
                 </li>
                 @if(Auth::user()->name === 'Admin')
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">新增分類</a>
+                    <a class="nav-link" href="{{route('category.create')}}">新增分類</a>
                 </li>
                 @endif
             @endauth   
