@@ -21,7 +21,14 @@
         <div class="col-4">
             <ul class="list-group">
                 @foreach($category as $cate)
-                <li class="list-group-item">{{$cate->title}}</li>
+                <li class="list-group-item">
+                    {{$cate->title}}
+                    <form action="{{route('category.destroy',['id'=>$cate->id])}}" method="post" class="d-inline-block float-right">
+                        @csrf
+                        @method('delete')
+                        <input type="submit" value="刪除" class="btn btn-danger">
+                    </form>
+                </li>
                 @endforeach
             </ul>
         </div>
