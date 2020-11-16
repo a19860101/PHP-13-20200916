@@ -92,7 +92,8 @@ class PostController extends Controller
     {
         //
         // $post = Post::findOrFail($post->id);
-        return view('post.edit',compact('post'));
+        $categories = Category::all();
+        return view('post.edit',compact('post','categories'));
     }
 
     /**
@@ -113,6 +114,7 @@ class PostController extends Controller
         // ]);
 
         $post->fill($request->all());
+        $post->category_id = $request->category_id;
         $post->save();
 
         return redirect()->route('post.index');
