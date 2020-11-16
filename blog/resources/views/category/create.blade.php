@@ -26,7 +26,7 @@
                     <form action="{{route('category.destroy',['id'=>$cate->id])}}" method="post" class="d-inline-block float-right">
                         @csrf
                         @method('delete')
-                        <input type="submit" value="刪除" class="btn btn-danger">
+                        <input type="submit" value="刪除" class="btn btn-danger" onclick="return confirm('確認刪除?')">
                     </form>
                 </li>
                 @endforeach
