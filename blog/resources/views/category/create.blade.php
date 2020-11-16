@@ -18,6 +18,13 @@
                 <input type="button" value="取消" class="btn btn-danger" onclick="history.back()">
             </form>
         </div>
+        <div class="col-4">
+            <ul class="list-group">
+                @foreach($category as $cate)
+                <li class="list-group-item">{{$cate->title}}</li>
+                @endforeach
+            </ul>
+        </div>
     </div>
 </div>
 
