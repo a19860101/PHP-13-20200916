@@ -60,13 +60,8 @@ class PostController extends Controller
         // ]);
         // $post->save();
        
-        // $post = new Post;
-        // $post->fill($request->all());
-        // $post->user_id = Auth::id();
-        // $post->category_id = $request->category_id;
-        // $post->save();
 
-        // return redirect()->route('post.index');
+
         // $request->file('cover') 暫存
         // $request->file('cover')->store('images'); 上傳到 storage/app/images 檔名隨機產生
         // $request->file('cover')->store('images','public'); storage/app/public/images 檔名隨機產生
@@ -78,9 +73,18 @@ class PostController extends Controller
             $ext = $request->file('cover')->getClientOriginalExtension();
             $cover = Str::uuid().'.'.$ext;
             $request->file('cover')->storeAs('public/images',$cover);
+        }else{
+            $cover = '';
         }
 
-        return $cover;
+        $post = new Post;
+        $post->fill($request->all());
+        $post->cover = $cover;
+        $post->user_id = Auth::id();
+        $post->category_id = $request->category_id;
+        $post->save();
+        return redirect()->route('post.index');
+
     }
 
     /**
