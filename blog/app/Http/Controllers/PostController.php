@@ -47,7 +47,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
-        $post = new Post;
+        // $post = new Post;
         // $post->title    =   $request->title;
         // $post->content  =   $request->content;
         // $post->save();
@@ -57,13 +57,18 @@ class PostController extends Controller
         //     'content'   => $request->content
         // ]);
         // $post->save();
+       
+        // $post = new Post;
+        // $post->fill($request->all());
+        // $post->user_id = Auth::id();
+        // $post->category_id = $request->category_id;
+        // $post->save();
 
-        $post->fill($request->all());
-        $post->user_id = Auth::id();
-        $post->category_id = $request->category_id;
-        $post->save();
-
-        return redirect()->route('post.index');
+        // return redirect()->route('post.index');
+        // $request->file('cover') 暫存
+        // $request->file('cover')->store('images'); 上傳到 storage/app/images 檔名隨機產生
+        // $request->file('cover')->store('images','public'); storage/app/public/images 檔名隨機產生
+        // return 
     }
 
     /**

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-8">
-            <form action="{{route('post.store')}}" method="post" enctype="multipar">
+            <form action="{{route('post.store')}}" method="post" enctype="multipart/form-data">
             @csrf
                 <div class="form-group">
                     <label for="title">文章標題</label>
