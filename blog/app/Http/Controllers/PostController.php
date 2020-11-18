@@ -69,6 +69,12 @@ class PostController extends Controller
         // $request->file('cover')->getClientOriginalName(); 取得原始檔名
         // $request->file('cover')->getClientOriginalExtension(); 取得副檔名
         
+        //驗證
+        $request->validate([
+            'title'     => 'required | max:10',
+            'content'   => 'required | max:200'
+        ]);
+        
         if($request->file('cover')){
             $ext = $request->file('cover')->getClientOriginalExtension();
             $cover = Str::uuid().'.'.$ext;
