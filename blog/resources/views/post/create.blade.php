@@ -35,7 +35,9 @@
 
 @if($errors->any())
     @foreach($errors->all() as $error)
-    {{$error}}
+    <div class="alert alert-danger mx-5 mt-5" role="alert">
+        {{$error}}
+    </div>
     @endforeach
 @endif
 <script src="https://cdn.ckeditor.com/4.15.0/full/ckeditor.js"></script>
