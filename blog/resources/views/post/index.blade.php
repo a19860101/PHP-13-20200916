@@ -6,6 +6,9 @@
         <div class="row justify-content-center">
             @foreach($posts as $post)
             <div class="col-8 border mb-5 p-4">
+                <div>
+                    <img src="{{asset('storage/images/'.$post->cover)}}" class="w-100">
+                </div>
                 <h2>{{$post->title}}</h2> 
                 <div>分類: {{$post->category->title}}</div>
                 <div>
