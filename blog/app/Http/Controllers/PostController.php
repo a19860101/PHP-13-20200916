@@ -68,7 +68,11 @@ class PostController extends Controller
         // $request->file('cover') 暫存
         // $request->file('cover')->store('images'); 上傳到 storage/app/images 檔名隨機產生
         // $request->file('cover')->store('images','public'); storage/app/public/images 檔名隨機產生
-        // return 
+        // $request->file('cover')->storeAs('public/images','qqq'); storage/app/public/images 檔名自訂
+        // $request->file('cover')->getClientOriginalName(); 取得原始檔名
+        // $request->file('cover')->getClientOriginalExtension(); 取得副檔名
+        
+        return $request->file('cover')->getClientOriginalExtension();
     }
 
     /**
