@@ -33,6 +33,11 @@
     </div>
 </div>
 
+@if($errors->any())
+    @foreach($errors->all() as $error)
+    {{$error}}
+    @endforeach
+@endif
 <script src="https://cdn.ckeditor.com/4.15.0/full/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('content');
