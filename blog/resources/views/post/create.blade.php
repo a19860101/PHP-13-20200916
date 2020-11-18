@@ -4,11 +4,15 @@
 <div class="container">
     <div class="row">
         <div class="col-8">
-            <form action="{{route('post.store')}}" method="post">
+            <form action="{{route('post.store')}}" method="post" enctype="multipar">
             @csrf
                 <div class="form-group">
                     <label for="title">文章標題</label>
                     <input type="text" class="form-control" id="title" name="title">
+                </div>
+                <div class="form-group">
+                    <label for="cover">文章封面</label>
+                    <input type="file" name="cover" id="cover" >
                 </div>
                 <div class="form-group">
                     <label for="category_id">分類</label>
