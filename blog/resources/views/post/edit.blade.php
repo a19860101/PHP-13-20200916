@@ -12,7 +12,7 @@
                     </div>
                     <div class="form-group">
                         <label for="tag">文章標籤</label>
-                        <input type="text" class="form-control" id="tag" name="tag">
+                        <input type="text" class="form-control" id="tag" name="tag" value="{{$post->toTagString()}}">
                     </div>
                     <div class="form-group">
                     <label for="category_id">分類</label>

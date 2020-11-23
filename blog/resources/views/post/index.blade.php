@@ -17,7 +17,7 @@
                 <div>
                     @foreach($post->tags as $tag)
                        <a href="#" class="badge badge-info">{{$tag->title}}</a>
-                    @endforeach{{$tag->title}}
+                    @endforeach
                 </div>
                 <div>分類: {{$post->category->title}}</div>
                 <div>
