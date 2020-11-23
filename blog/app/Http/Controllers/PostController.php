@@ -73,7 +73,7 @@ class PostController extends Controller
         //驗證
         $request->validate([
             'title'     => 'required | max:100',
-            'content'   => 'required',
+            'content'   => 'required'
         ]);
         
         if($request->file('cover')){
@@ -89,20 +89,17 @@ class PostController extends Controller
         $post->cover = $cover;
         $post->user_id = Auth::id();
         $post->category_id = $request->category_id;
-
+        $post->save();
 
         $tags = explode(',',$request->tag);
-        // dd($tags);
         foreach($tags as $tag){
             $t = Tag::firstOrCreate(['title'=> $tag]);
             // $t = Tag::create(['title'=> $tag]);
-            // dd($tag);
+            // dd($post->tags);
+            // dd($t->id);
             $post->tags()->attach($t->id);
         }
-
-
-
-        $post->save();
+       
         return redirect()->route('post.index');
 
     }
