@@ -14,6 +14,11 @@
                     @endif
                 </div>
                 <h2>{{$post->title}}</h2> 
+                <div>
+                    @foreach($post->tags as $tag)
+                       <a href="#" class="badge badge-info">{{$tag->title}}</a>
+                    @endforeach{{$tag->title}}
+                </div>
                 <div>分類: {{$post->category->title}}</div>
                 <div>
                     作者: {{$post->user->name}}
