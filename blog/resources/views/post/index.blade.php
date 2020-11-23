@@ -16,7 +16,7 @@
                 <h2>{{$post->title}}</h2> 
                 <div>
                     @foreach($post->tags as $tag)
-                       <a href="#" class="badge badge-info">{{$tag->title}}</a>
+                       <a href="{{route('tag.post',['id'=>$tag->id])}}" class="badge badge-info">{{$tag->title}}</a>
                     @endforeach
                 </div>
                 <div>分類: {{$post->category->title}}</div>

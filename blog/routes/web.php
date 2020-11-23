@@ -34,3 +34,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::resource('/category','CategoryController');
+
+Route::get('/tag/{tag}','TagController@tagPost')->name('tag.post');

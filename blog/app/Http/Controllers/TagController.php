@@ -82,4 +82,7 @@ class TagController extends Controller
     {
         //
     }
+    public function tagPost(Tag $tag){
+        return $tag->posts;
+    }
 }
