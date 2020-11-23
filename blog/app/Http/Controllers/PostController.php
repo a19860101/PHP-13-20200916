@@ -71,24 +71,24 @@ class PostController extends Controller
         // $request->file('cover')->getClientOriginalExtension(); 取得副檔名
         
         //驗證
-        // $request->validate([
-        //     'title'     => 'required | max:10',
-        //     'content'   => 'required | max:200'
-        // ]);
+        $request->validate([
+            'title'     => 'required | max:100',
+            'content'   => 'required',
+        ]);
         
-        // if($request->file('cover')){
-        //     $ext = $request->file('cover')->getClientOriginalExtension();
-        //     $cover = Str::uuid().'.'.$ext;
-        //     $request->file('cover')->storeAs('public/images',$cover);
-        // }else{
-        //     $cover = '';
-        // }
+        if($request->file('cover')){
+            $ext = $request->file('cover')->getClientOriginalExtension();
+            $cover = Str::uuid().'.'.$ext;
+            $request->file('cover')->storeAs('public/images',$cover);
+        }else{
+            $cover = '';
+        }
 
-        // $post = new Post;
-        // $post->fill($request->all());
-        // $post->cover = $cover;
-        // $post->user_id = Auth::id();
-        // $post->category_id = $request->category_id;
+        $post = new Post;
+        $post->fill($request->all());
+        $post->cover = $cover;
+        $post->user_id = Auth::id();
+        $post->category_id = $request->category_id;
 
 
         $tags = explode(',',$request->tag);
@@ -97,12 +97,13 @@ class PostController extends Controller
             $t = Tag::firstOrCreate(['title'=> $tag]);
             // $t = Tag::create(['title'=> $tag]);
             // dd($tag);
+            $post->tags()->attach($t->id);
         }
 
 
 
-        // $post->save();
-        // return redirect()->route('post.index');
+        $post->save();
+        return redirect()->route('post.index');
 
     }
 
