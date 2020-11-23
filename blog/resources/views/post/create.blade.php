@@ -11,6 +11,10 @@
                     <input type="text" class="form-control" id="title" name="title">
                 </div>
                 <div class="form-group">
+                    <label for="tag">文章標籤</label>
+                    <input type="text" class="form-control" id="tag" name="tag">
+                </div>
+                <div class="form-group">
                     <label for="cover">文章封面</label>
                     <input type="file" name="cover" id="cover" >
                 </div>
