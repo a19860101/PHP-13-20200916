@@ -20,7 +20,7 @@
                     <td>{{$post->created_at}}</td>
                     <td>{{$post->updated_at}}</td>
                     <td>
-                        <a href="#" class="btn btn-info">還原</a>
+                        <a href="{{route('trash.restore',['id'=>$post->id])}}" class="btn btn-info">還原</a>
                         <form action="" class="d-inline-block">
                             @csrf
                             @method('delete')

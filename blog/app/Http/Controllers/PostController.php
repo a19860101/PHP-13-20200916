@@ -190,4 +190,8 @@ class PostController extends Controller
         // $posts = Post::withTrashed()->get();
         return view('trash.index',compact('posts'));
     }
+    public function restore($id){
+        Post::onlyTrashed()->find($id)->restore();
+        return redirect()->route('trash.index');
+    }
 }
