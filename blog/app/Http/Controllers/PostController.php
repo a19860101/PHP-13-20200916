@@ -186,6 +186,8 @@ class PostController extends Controller
         return redirect()->route('post.index');
     }
     public function trash(){
-        return view('trash.index');
+        $posts = Post::onlyTrashed()->get();
+        // $posts = Post::withTrashed()->get();
+        return view('trash.index',compact('posts'));
     }
 }
