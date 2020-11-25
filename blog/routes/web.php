@@ -39,3 +39,4 @@ Route::get('/tag/{tag}','TagController@tagPost')->name('tag.post');
 
 Route::get('/trash','PostController@trash')->name('trash.index');
 Route::get('/trash/{id}','PostController@restore')->name('trash.restore');
+Route::delete('trash/{id}','PostController@delete')->name('trash.delete');
